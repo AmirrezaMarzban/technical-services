@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+<data>
+  <variable
+    name="category"
+    type="String" />
+  <variable
+    name="location"
+    type="String" />
+  <variable
+    name="cooperation"
+    type="String" />
+  <variable
+    name="pMethod"
+    type="String" />
+  <variable
+    name="insurance"
+    type="String" />
+  <variable
+    name="workingHours"
+    type="String" />
+  <variable
+    name="remote"
+    type="String" />
+  <variable
+    name="workingExperiences"
+    type="String" />
+  <variable
+    name="militaryService"
+    type="String" />
+</data>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="80dp"
+    android:orientation="vertical">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <ImageButton
+        android:id="@+id/img_back2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:background="?selectableItemBackground"
+        android:layout_marginLeft="10dp"
+        android:onClick="back"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/light_gray" />
+
+      <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:text="@string/publish_post"
+        android:textColor="?colorOnSecondary"
+        android:textSize="16sp" />
+
+      <ImageView
+        android:id="@+id/imgSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:layout_marginRight="10dp"
+        android:onClick="back"
+        android:src="@drawable/ic_confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/light_gray" />
+    </LinearLayout>
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+      android:id="@+id/progressBar"
+      style="?android:attr/progressBarStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:gravity="right"
+      android:text="@string/common_info"
+      android:textColor="?colorOnSecondary"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtPostTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittext"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_margin="5dp"
+        android:hint="@string/job_title" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:gravity="right"
+      android:text="@string/job_desc2"
+      android:textSize="11sp"
+      android:textStyle="bold" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtPostDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_margin="5dp"
+        android:hint="@string/job_desc" />
+
+    <LinearLayout
+      android:id="@+id/lnrCategory"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+          android:id="@+id/txtCategory"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="@string/choose"
+          android:text="@{category}"
+          android:textSize="10sp" />
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="8"
+          android:text="@string/category"
+          android:textColor="?colorOnSecondary"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/lnrLocation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+          android:id="@+id/txtLocation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="@string/choose"
+          android:text="@{location}"
+          android:textSize="10sp" />
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="8"
+          android:text="@string/post_location"
+          android:textColor="?colorOnSecondary"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/textView12"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:gravity="right"
+      android:text="@string/post_position_description"
+      android:textColor="?colorOnSecondary"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+    <LinearLayout
+      android:id="@+id/lnrCooperation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+          android:id="@+id/txtCooperation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="@string/choose"
+          android:text="@{cooperation}"
+          android:textSize="10sp" />
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="8"
+          android:text="@string/cooperation_type"
+          android:textColor="?colorOnSecondary"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/lnrPmethod"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+          android:id="@+id/txtPMthod"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="@string/choose"
+          android:text="@{pMethod}"
+          android:textSize="10sp" />
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="8"
+          android:text="@string/payment_method_type"
+          android:textColor="?colorOnSecondary"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <CheckBox
+          android:id="@+id/chckInsurance"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:buttonTint="@color/pink"
+          android:textColor="?colorOnSecondary"
+          android:text="@string/insurance"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/lnrWorkingHours"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+          android:id="@+id/txtWorkingHours"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="@string/choose"
+          android:text="@{workingHours}"
+          android:textSize="10sp" />
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="8"
+          android:text="@string/working_hours"
+          android:textColor="?colorOnSecondary"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <CheckBox
+          android:id="@+id/chckRemote"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:buttonTint="@color/pink"
+          android:text="@string/remote"
+          android:textSize="13sp" />
+
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/textView13"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:gravity="right"
+      android:text="@string/support_and_agreements"
+      android:textColor="?colorOnSecondary"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+    <TextView
+      android:id="@+id/textView14"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:gravity="right"
+      android:text="@string/support_and_agreements_desc"
+      android:textSize="11sp"
+      android:textStyle="bold" />
+
+    <LinearLayout
+      android:id="@+id/lnrWorkingExperiences"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+          android:id="@+id/txtWorkingExperiences"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="@string/choose"
+          android:text="@{workingExperiences}"
+          android:textSize="10sp" />
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="8"
+          android:text="@string/working_experiences"
+          android:textColor="?colorOnSecondary"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="?selectableItemBackground"
+      android:clickable="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <CheckBox
+          android:id="@+id/chckmilitary"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:buttonTint="@color/pink"
+          android:text="@string/military_service"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_error"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+  </LinearLayout>
+</layout>

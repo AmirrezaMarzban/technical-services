@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <import type="android.view.View"/>
+  </data>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+      android:layout_width="40dp"
+      android:layout_height="3dp"
+      android:layout_gravity="center"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/round_mark" />
+
+    <ProgressBar
+      android:id="@+id/progressBar"
+      style="?android:attr/progressBarStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+    <include
+      layout="@layout/layout_recyclerview_dialogs"/>
+
+  </LinearLayout>
+</layout>

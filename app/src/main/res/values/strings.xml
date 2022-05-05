@@ -1,0 +1,80 @@
+<resources>
+  <string name="app_name">خدمات فنی</string>
+  <string name="home">خانه</string>
+  <string name="search">جستجو: برای مثال کارگر برای ساختمان سازی</string>
+  <string name="profile">حساب کاربری</string>
+  <string name="which">به چه</string>
+  <string name="service">خدماتی</string>
+  <string name="do_you">دارید؟</string>
+  <string name="need">نیاز</string>
+  <string name="your_phone">تلفن همراه</string>
+  <string name="register_or_login">ورود یا ثبت نام</string>
+  <string name="confirm">تایید</string>
+  <string name="my_profile">پروفایل من</string>
+  <string name="sign_out_description">شما با شماره %s وارد شده اید و آگهی های ثبت شده با این شماره را مشاهده می کنید.</string>
+  <string name="sign_out">خروج از حساب</string>
+  <string name="enter_otp">کد ارسالی را وارد کنید</string>
+  <string name="posts_count">تعداد آگهی: %s</string>
+  <string name="remove">حذف</string>
+  <string name="no_result">نتیجه ای یافت نشد</string>
+  <string name="verified">تایید شده</string>
+  <string name="not_verified">در انتظار تایید</string>
+  <string name="user_info">اطلاعات کاربری</string>
+  <string name="user_name">نام و نام خانوادگی</string>
+  <string name="user_register_date">تاریخ ثبت نام: %s</string>
+
+  <!--  setting items-->
+  <string name="my_posts">آگهی های من</string>
+  <string name="my_recently">بازدیدهای اخیر</string>
+  <string name="setting">تنظیمات</string>
+  <string name="support">پشتیبانی و قوانین</string>
+  <string name="theme">ظاهر برنامه</string>
+  <string name="location">موقعیت مکانی</string>
+  <string name="contact_whatsapp">پیام به واتس اپ</string>
+  <string name="contact">تماس</string>
+  <!--  setting items-->
+
+  <!--  theme setting-->
+  <string name="night">شب</string>
+  <string name="light">روز</string>
+  <string name="system_default">متناسب با سیستم</string>
+  <!--  theme setting-->
+
+  <!--  dialog-->
+  <string name="sure_delete">این آگهی حذف شود؟</string>
+  <string name="warning">هشدار</string>
+  <string name="ok">بله</string>
+  <string name="cancel">خیر</string>
+  <!--  dialog-->
+
+  <!--  create post items-->
+  <string name="common_info">مشخصات کلی</string>
+  <string name="publish_post">ثبت آگهی</string>
+  <string name="edit_post">ویرایش آگهی</string>
+  <string name="category">دسته بندی</string>
+  <string name="post_location">محدوده آگهی</string>
+  <string name="post_position_description">شرح موقعیت شغلی</string>
+  <string name="cooperation_type">نوع همکاری</string>
+  <string name="payment_method_type">شیوه پرداخت</string>
+  <string name="insurance">بیمه</string>
+  <string name="working_hours">ساعات کاری</string>
+  <string name="remote">امکان دورکاری وجود دارد</string>
+  <string name="support_and_agreements">شرایط و نیازمندی ها</string>
+  <string name="support_and_agreements_desc">تکمیل این اطلاعات، کیفیت آگهی و شانس تعامل با کارجویانی متناسب با شرایط شمارا افزایش می دهد.</string>
+  <string name="working_experiences">سابقه</string>
+  <string name="military_service">وضعیت سربازی</string>
+  <string name="choose">انتخاب</string>
+  <string name="input_error">این مورد را وارد کنید</string>
+  <string name="next">بعدی</string>
+  <string name="job_title">عنوان شغلی: برای مثال پرستار تمام وقت</string>
+  <string name="job_desc">توضیحات آگهی</string>
+  <string name="job_desc2">جزئیات و نکات قابل توجه را بنویسید.</string>
+  <!--  create post items-->
+
+  <!--  show post items-->
+  <string name="date_category">%s در %s | %s</string>
+  <string name="contact_info">اطلاعات تماس</string>
+  <string name="working_experiences_need">نیاز به سابقه</string>
+  <string name="remote2">دورکاری</string>
+  <!--  show post items-->
+</resources>

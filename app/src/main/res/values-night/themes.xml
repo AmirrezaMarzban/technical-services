@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Base application theme. -->
+  <style name="Theme.KhadamatFani" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/light_mode_black</item>
+    <item name="colorPrimaryVariant">@color/light_mode_black</item>
+    <item name="colorOnPrimary">@color/dark_mode_gray</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/teal_200</item>
+    <item name="colorSecondaryVariant">@color/teal_200</item>
+    <item name="colorOnSecondary">@color/white</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    <!-- Customize your theme here. -->
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="fontFamily">@font/ir_sans</item>
+  </style>
+
+  <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+  </style>
+
+  <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@drawable/rounded_bottomsheet_background</item>
+  </style>
+
+  <!--    Material Alert Dialog style-->
+  <style name="MaterialAlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+    <item name="colorSurface">#212121</item>
+    <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
+    <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyle</item>
+    <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    <item name="android:layoutDirection">rtl</item>
+  </style>
+
+  <style name="TitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+    <item name="android:textColor">#fafafa</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">20sp</item>
+  </style>
+
+  <style name="BodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+    <item name="android:textColor">#c7c7c7</item>
+    <item name="android:textSize">14sp</item>
+  </style>
+
+  <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+    <item name="android:textColor">@color/pink</item>
+    <item name="rippleColor">#a4a4a4</item>
+  </style>
+
+  <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+    <item name="android:textColor">#757575</item>
+    <item name="rippleColor">#a4a4a4</item>
+  </style>
+  <!--    Material Alert Dialog style-->
+
+</resources>
