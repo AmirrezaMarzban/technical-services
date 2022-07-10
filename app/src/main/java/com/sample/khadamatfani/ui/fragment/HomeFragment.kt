@@ -30,21 +30,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             adapter = mAdapter
         }
         mainViewModel.apply {
-            getCategories().observe(viewLifecycleOwner, Observer { resources ->
+            getCategories().observe(viewLifecycleOwner) { resources ->
                 when (resources.status) {
                     SUCCESS -> {
                         mAdapter.updateItem(resources.data?.data!!)
                         progressBar.visibility = View.GONE
                     }
                     ERROR -> {
-                        Toast.makeText(requireContext(), resources.message, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), resources.message, Toast.LENGTH_SHORT)
+                            .show()
                         progressBar.visibility = View.VISIBLE
                     }
                     LOADING -> {
                         progressBar.visibility = View.VISIBLE
                     }
                 }
-            })
+            }
         }
     }
 }

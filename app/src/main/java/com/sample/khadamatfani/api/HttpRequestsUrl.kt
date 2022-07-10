@@ -1,7 +1,7 @@
 package com.sample.khadamatfani.api
 
 object HttpRequestsUrl {
-    const val BASE_URL = "http://192.168.1.101:8000/api/v1/"
+    const val BASE_URL = "http://192.168.1.5:8000/api/v1/"
 
     const val CATEGORIES = "categories"
     const val PROVINCES = "provinces"

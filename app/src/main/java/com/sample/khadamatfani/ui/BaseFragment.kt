@@ -9,12 +9,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.sample.khadamatfani.R
 import com.sample.khadamatfani.databinding.FragmentCreatePostBinding
 import com.sample.khadamatfani.databinding.FragmentShowPostBinding
 import com.sample.khadamatfani.extensions.replaceFragment
-import com.sample.khadamatfani.ui.fragment.CreatePostFragment
 import com.sample.khadamatfani.ui.viewmodel.LoginViewModel
 import com.sample.khadamatfani.ui.viewmodel.MainViewModel
 import com.sample.khadamatfani.ui.viewmodel.SharedViewModel

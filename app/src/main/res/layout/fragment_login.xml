@@ -2,9 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools">
-  <data>
-
-  </data>
 <androidx.constraintlayout.widget.ConstraintLayout
   android:id="@+id/container"
   android:layout_width="match_parent"
@@ -13,7 +10,7 @@
   tools:context=".ui.fragment.LoginFragment">
 
   <ImageView
-    android:id="@+id/imageView2"
+    android:id="@+id/imgWelcome"
     android:layout_width="200dp"
     android:layout_height="200dp"
     android:layout_marginTop="76dp"
@@ -21,12 +18,13 @@
     app:layout_constraintHorizontal_bias="0.497"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/worker" />
+    app:srcCompat="@drawable/welcome" />
 
   <Button
     android:id="@+id/btnLogin"
     android:layout_width="150dp"
     android:layout_height="50dp"
+    android:layout_marginBottom="220dp"
     android:backgroundTint="@color/pink"
     android:text="@string/confirm"
     android:textColor="?colorOnSecondary"
@@ -42,6 +40,7 @@
     android:id="@+id/edtPhone"
     android:layout_width="309dp"
     android:layout_height="52dp"
+    android:layout_marginBottom="48dp"
     android:background="@drawable/edittext"
     android:drawableLeft="@drawable/ic_phone"
     android:ems="10"

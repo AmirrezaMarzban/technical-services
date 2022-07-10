@@ -20,7 +20,7 @@ class OtpSheetDialog : BaseBottomSheetDialog<OtpVerificationDialogBinding>() {
         dialog?.setCancelable(false)
         edtPhone.doOnTextChanged { text, start, before, count ->
             if(text?.length == 4) {
-                logins.sendOtpCode(text.toString().toInt()).observe(this, { resources ->
+                logins.sendOtpCode(text.toString().toInt()).observe(this) { resources ->
                     when (resources.status) {
                         SUCCESS -> {
                             resources.data?.body()?.apply {
@@ -48,7 +48,7 @@ class OtpSheetDialog : BaseBottomSheetDialog<OtpVerificationDialogBinding>() {
                         LOADING -> {
                         }
                     }
-                })
+                }
             }
         }
     }

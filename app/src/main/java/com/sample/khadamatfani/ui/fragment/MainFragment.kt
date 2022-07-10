@@ -1,9 +1,7 @@
 package com.sample.khadamatfani.ui.fragment
 
 import android.content.res.ColorStateList
-import android.graphics.Color
 import android.os.Bundle
-import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import com.sample.khadamatfani.R
@@ -26,8 +24,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     }
 
     private fun setUpNavigation() {
-//        val navController = Navigation.findNavController(requireActivity(), R.id.nav_fragment)
-//        NavigationUI.setupWithNavController(binding.bttmNav, navController)
         bttm_nav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.mnu_home -> {
@@ -54,11 +50,11 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             }
         }
 
-        sharedViewModel.fbmVisibility.observe(viewLifecycleOwner, { visibility ->
+        sharedViewModel.fbmVisibility.observe(viewLifecycleOwner) { visibility ->
             fbmAdd.fadeVisibility(visibility, 700)
-        })
+        }
 
-        sharedViewModel.fbmIsAdd.observe(viewLifecycleOwner, { isAdd ->
+        sharedViewModel.fbmIsAdd.observe(viewLifecycleOwner) { isAdd ->
             if (isAdd) {
                 fbmAdd.backgroundTintList =
                     ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.pink))
@@ -72,7 +68,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 )
                 fbmAdd.setImageResource(R.drawable.ic_call)
             }
-        })
+        }
     }
 
 }

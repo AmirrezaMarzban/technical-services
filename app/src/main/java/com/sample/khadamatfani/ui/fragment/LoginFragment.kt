@@ -2,6 +2,7 @@ package com.sample.khadamatfani.ui.fragment
 
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.sample.khadamatfani.databinding.FragmentLoginBinding
 import com.sample.khadamatfani.R
 import com.sample.khadamatfani.api.Status.*
@@ -14,8 +15,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override fun getLayout() = R.layout.fragment_login
 
     override fun main(savedInstanceState: Bundle?) {
+        Glide.with(this).load(R.drawable.welcome).into(imgWelcome)
         btnLogin.setOnClickListener {
-            logins.login(edtPhone.text.toString()).observe(this, {resources ->
+            logins.login(edtPhone.text.toString()).observe(this) { resources ->
                 when (resources.status) {
                     SUCCESS -> {
                         resources.data?.body()?.apply {
@@ -35,13 +37,15 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                         }
                     }
                     ERROR -> {
-                        Toast.makeText(requireContext(), resources.message, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), resources.message, Toast.LENGTH_SHORT)
+                            .show()
                     }
                     LOADING -> {
                     }
                 }
-            })
-            OtpSheetDialog().show(parentFragmentManager, OtpSheetDialog().tag)
+                OtpSheetDialog().show(childFragmentManager, OtpSheetDialog().tag)
+
+            }
         }
     }
 }

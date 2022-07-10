@@ -59,7 +59,7 @@ class CategoryAdapter(
                         true,
                         bundleOf(
                             "category" to category.id,
-                            )
+                        )
                     )
                 }
 //                viewModel = albumViewModel

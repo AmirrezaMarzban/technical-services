@@ -35,7 +35,7 @@ class UserInfoFragment : BaseFragment<FragmentUserInfoBinding>() {
 
     private fun editUserInfo() {
         mainViewModel.updateUserProfile(edtName.text.toString(), edtPhone.text.toString(),
-            txtLocation.text.toString()).observe(viewLifecycleOwner, { resources ->
+            txtLocation.text.toString()).observe(viewLifecycleOwner) { resources ->
             when (resources.status) {
                 SUCCESS -> {
                     resources.data?.body()?.apply {
@@ -65,11 +65,11 @@ class UserInfoFragment : BaseFragment<FragmentUserInfoBinding>() {
                     progressBar.visibility = View.VISIBLE
                 }
             }
-        })
+        }
     }
 
     private fun init() {
-        mainViewModel.getUserProfile().observe(viewLifecycleOwner, { resources ->
+        mainViewModel.getUserProfile().observe(viewLifecycleOwner) { resources ->
             when (resources.status) {
                 SUCCESS -> {
                     edtName.setText(resources.data?.body()!!.name)
@@ -87,11 +87,11 @@ class UserInfoFragment : BaseFragment<FragmentUserInfoBinding>() {
                     progressBar.visibility = View.VISIBLE
                 }
             }
-        })
+        }
 
-        sharedViewModel.locationData.observe(viewLifecycleOwner, {
+        sharedViewModel.locationData.observe(viewLifecycleOwner) {
             txtLocation.text = it
-        })
+        }
     }
 
 }
